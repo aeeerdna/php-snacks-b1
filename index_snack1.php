@@ -23,6 +23,15 @@
         'pointsHome' => '97',
         'awayTeam' => 'Oklahoma City Thunder',
         'pointsAway' => '101'
+     ];
+
+
+    // array team and points gameThree
+    $gameThree =[
+        'homeTeam' => 'Phoenix Suns',
+        'pointsHome' => '121',
+        'awayTeam' => 'Los Angeles Clippers',
+        'pointsAway' => '115'
     ]
 
  ?>
@@ -40,5 +49,13 @@
 <div>
     <p>
         <?= $gameTwo["homeTeam"]?> - <?= $gameTwo["awayTeam"]?> | <?= $gameTwo["pointsHome"]?> - <?= $gameTwo["pointsAway"]?>
+    </p>
+</div>
+
+
+<!-- gameThree score on web page -->
+<div>
+    <p>
+        <?= $gameThree["homeTeam"]?> - <?= $gameThree["awayTeam"]?> | <?= $gameThree["pointsHome"]?> - <?= $gameThree["pointsAway"]?>
     </p>
 </div>
