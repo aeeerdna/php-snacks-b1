@@ -5,3 +5,23 @@
         Stampiamo a schermo tutte le partite con questo schema.
         Olimpia Milano - Cantù | 55-60
  -->
+
+ <?php
+
+    // array team and points
+    $gameOne =[
+        'homeTeam' => 'Los Angeles Lakers',
+        'pointsHome' => '113',
+        'awayTeam' => 'Golden State Warriors',
+        'pointsAway' => '108'
+    ]
+
+ ?>
+
+
+<!-- game score on web page -->
+<div>
+    <p>
+        <?= $gameOne["homeTeam"]?> - <?= $gameOne["awayTeam"]?> | <?= $gameOne["pointsHome"]?> - <?= $gameOne["pointsAway"]?>
+    </p>
+</div>
