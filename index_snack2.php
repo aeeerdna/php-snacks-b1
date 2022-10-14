@@ -8,31 +8,39 @@
 
  <?php
 
-    // $name = "name";
-    // $mail = "mail";
-    // $age = "age";
-
-    // GET parame"tri
-    $_GET ["name"];
-    $_GET ["mail"];
-    $_GET ["age"];
-
-    // echo $_GET ["name"];
-
-    $accessOk = "access granted";
-    $accessDenied = "access denied";
-
-    if((strlen($_GET ["name"]) >= 3) /*&& (strpos($_GET ["mail"], "@", "."))*/) {
-        echo $accessOk;
+    // GET parametri
+       $name = '';
+    if (isset($_GET ["name"])){
+        $name = $_GET ["name"];
     }
-    else {
-        echo $accessDenied;
+
+    $mail = '';
+    if (isset($_GET ["mail"])){
+        $mail = $_GET ["mail"];
     }
+
+    $age = '';
+    if (isset($_GET ["age"])){
+        $age = $_GET ["age"];
+    }
+
+
+    // verificare name, mail e age
+
+        // variabili
+        $accessOk = "access granted";
+        $accessDenied = "access denied";
+
+        $atPos = strpos ($mail, "@");
+        $dotPos = strpos ($mail, ".", $atPos);
+        
+
+        // condizioni    
+        if(strlen($name) >= 3 && $atPos > 0 && $dotPos > 0 && is_numeric($age)) {
+            echo $accessOk;
+        }
+        else {
+            echo $accessDenied;
+        }
 
 ?>
-
-<p>
-    <?= strlen($_GET ["name"]) ?>
-</p>
-
-<!-- && strpos($mail, ".","@") && $age !isNan) -->
